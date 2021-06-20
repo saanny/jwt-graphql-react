@@ -1,20 +1,14 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
+import { Header } from "./Header";
 export const Routes: React.FC = () => {
   return (
     <BrowserRouter>
       <div>
-        <header>
-          <div>
-            <Link to="/register">register</Link>
-          </div>
-          <div>
-            <Link to="/login">login</Link>
-          </div>
-        </header>
+        <Header />
         <hr />
         <Switch>
           <Route exact path="/" component={Home} />
